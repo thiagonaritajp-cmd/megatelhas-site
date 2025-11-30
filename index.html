@@ -2,18 +2,30 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Mega Telhas Ecológicas – Proteção total contra granizo e tempestades</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Telhas ecológicas resistentes ao granizo e ventos fortes. Proteja sua casa das tempestades com Mega Telhas Ecológicas. Atendemos todo o Paraná." />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mega Telhas Ecológicas | Proteção real contra granizo e ventos fortes</title>
+  <meta name="description" content="Telhas ecológicas resistentes a granizo, ventos fortes e intempéries. Conforto térmico e acústico, alta durabilidade e sustentabilidade para sua casa ou negócio.">
+  
+  <!-- Fonte moderna -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
   <style>
     :root {
-      --primary: #009688;
-      --primary-dark: #00695c;
-      --accent: #ffca28;
-      --bg: #f4f6f8;
-      --text: #222;
-      --muted: #607d8b;
+      --green-main: #1c8c42;
+      --green-dark: #0f5c29;
+      --green-soft: #e6f4ec;
+      --accent-yellow: #ffca28;
+      --gray-900: #101820;
+      --gray-700: #424242;
+      --gray-500: #757575;
+      --gray-100: #f5f5f7;
+      --white: #ffffff;
+      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.08);
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+      --max-width: 1120px;
     }
 
     * {
@@ -23,15 +35,10 @@
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f0f3f5;
+      color: var(--gray-900);
+      -webkit-font-smoothing: antialiased;
     }
 
     img {
@@ -39,1020 +46,1541 @@
       display: block;
     }
 
-    /* Layout base */
-    .container {
-      width: 100%;
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 16px;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    /* Navbar */
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .shell {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* HEADER */
     header {
       position: sticky;
       top: 0;
       z-index: 50;
-      background: #ffffffcc;
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #e0e0e0;
+      backdrop-filter: blur(14px);
+      background: rgba(240, 243, 245, 0.9);
+      border-bottom: 1px solid rgba(15, 92, 41, 0.06);
     }
 
-    .nav {
+    .header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 12px 0;
+      padding: 0.9rem 0;
+      gap: 1.5rem;
     }
 
-    .logo {
+    .brand {
       display: flex;
       align-items: center;
-      gap: 8px;
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: var(--primary-dark);
+      gap: 0.75rem;
     }
 
-    .logo-mark {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    .brand-logo {
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      background: radial-gradient(circle at 20% 20%, #3fd16c, #0f5c29);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff;
-      font-weight: 800;
-      font-size: 0.9rem;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 8px 20px rgba(5, 94, 42, 0.35);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .brand-text span:first-child {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--green-dark);
+    }
+
+    .brand-text span:last-child {
+      font-size: 0.8rem;
+      color: var(--gray-500);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
     }
 
     .nav-links {
-      display: none;
-      gap: 24px;
-      font-size: 0.95rem;
-      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.9rem;
+      color: var(--gray-700);
+    }
+
+    .nav-links a {
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      transition: background 0.18s ease, color 0.18s ease, transform 0.12s ease;
     }
 
     .nav-links a:hover {
-      color: var(--primary-dark);
+      background: rgba(28, 140, 66, 0.09);
+      color: var(--green-dark);
+      transform: translateY(-1px);
     }
 
-    .nav-cta {
-      display: none;
+    .nav-links a.active {
+      background: var(--green-soft);
+      color: var(--green-dark);
+      font-weight: 600;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .header-phone {
+      font-size: 0.8rem;
+      color: var(--gray-700);
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .header-phone strong {
+      font-weight: 600;
+      color: var(--green-dark);
     }
 
     .btn {
+      border-radius: var(--radius-pill);
+      padding: 0.55rem 1.3rem;
+      border: none;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      border-radius: 999px;
-      padding: 10px 20px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      border: none;
-      cursor: pointer;
-      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
-      text-align: center;
+      gap: 0.4rem;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.15s ease;
       white-space: nowrap;
     }
 
     .btn-primary {
-      background: var(--primary);
-      color: #fff;
-      box-shadow: 0 4px 12px rgba(0, 150, 136, 0.3);
+      background: linear-gradient(135deg, var(--green-main), var(--green-dark));
+      color: var(--white);
+      box-shadow: 0 12px 30px rgba(15, 92, 41, 0.5);
     }
 
     .btn-primary:hover {
-      background: var(--primary-dark);
       transform: translateY(-1px);
-      box-shadow: 0 6px 16px rgba(0, 150, 136, 0.4);
+      box-shadow: 0 18px 40px rgba(15, 92, 41, 0.55);
     }
 
-    .btn-outline {
-      border: 1px solid var(--primary);
-      color: var(--primary-dark);
-      background: #ffffff;
+    .btn-ghost {
+      background: transparent;
+      color: var(--green-dark);
+      border: 1px solid rgba(15, 92, 41, 0.22);
     }
 
-    .btn-outline:hover {
-      background: #e0f2f1;
+    .btn-ghost:hover {
+      background: rgba(15, 92, 41, 0.06);
     }
 
-    .badge {
+    .btn-pill {
+      border-radius: var(--radius-pill);
+    }
+
+    .btn-icon {
+      width: 1.1rem;
+      height: 1.1rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      border-radius: 999px;
-      padding: 4px 10px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      background: #e0f2f1;
-      color: var(--primary-dark);
+      justify-content: center;
+      font-size: 0.85rem;
     }
 
-    .badge-dot {
+    /* HERO */
+    .hero {
+      padding: 2.5rem 0 2.75rem;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(28, 140, 66, 0.06);
+      color: var(--green-dark);
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin-bottom: 0.7rem;
+    }
+
+    .hero-tag-dot {
       width: 7px;
       height: 7px;
-      border-radius: 50%;
-      background: #4caf50;
-    }
-
-    /* Hero */
-    .hero {
-      padding: 32px 0 40px;
-    }
-
-    .hero-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
+      border-radius: 999px;
+      background: #3fd16c;
+      box-shadow: 0 0 0 6px rgba(63, 209, 108, 0.3);
     }
 
     .hero-title {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: #263238;
-      margin: 12px 0;
+      font-size: clamp(2rem, 3vw, 2.4rem);
+      line-height: 1.1;
+      margin-bottom: 0.9rem;
+      color: var(--gray-900);
     }
 
-    .hero-highlight {
-      color: var(--primary-dark);
+    .hero-title span {
+      color: var(--green-dark);
     }
 
     .hero-subtitle {
-      font-size: 0.98rem;
-      color: var(--muted);
-      max-width: 520px;
+      font-size: 0.95rem;
+      color: var(--gray-700);
+      margin-bottom: 1.4rem;
+      max-width: 32rem;
     }
 
-    .hero-cta {
-      margin-top: 20px;
+    .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.4rem;
     }
 
-    .hero-note {
+    .hero-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
       font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 6px;
+      color: var(--gray-600);
     }
 
-    .hero-badges {
+    .hero-highlight-item {
       display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 18px;
-      font-size: 0.75rem;
+      align-items: center;
+      gap: 0.4rem;
     }
 
-    .hero-badge-chip {
-      padding: 6px 10px;
+    .hero-highlight-dot {
+      width: 8px;
+      height: 8px;
       border-radius: 999px;
-      background: #eceff1;
-      color: #455a64;
+      background: var(--accent-yellow);
     }
 
-    .hero-image {
+    .hero-media {
       position: relative;
     }
 
-    .hero-card {
-      background: #fff;
-      border-radius: 18px;
-      padding: 16px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    .hero-card-main {
+      background: radial-gradient(circle at top left, #f4fff8, #d3efe0);
+      border-radius: 26px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(15, 92, 41, 0.08);
     }
 
-    .hero-card img {
-      border-radius: 12px;
-      margin-bottom: 12px;
+    .hero-image-roof {
+      border-radius: 20px;
+      background: linear-gradient(135deg, #9fb4c8, #e2edf9);
+      height: 220px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 1rem;
     }
 
-    .hero-card-caption {
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    .hero-pill {
+    .roof-layer {
       position: absolute;
-      bottom: -10px;
-      right: 0;
-      transform: translateY(100%);
-      background: #263238;
-      color: #fff;
-      border-radius: 999px;
-      padding: 8px 14px;
-      font-size: 0.75rem;
+      inset: 0;
+      background-image:
+        linear-gradient(165deg, rgba(255, 255, 255, 0.9) 6px, transparent 6px),
+        linear-gradient(345deg, rgba(255, 255, 255, 0.85) 6px, transparent 6px);
+      background-size: 100px 40px;
+      opacity: 0.85;
+    }
+
+    .storm-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(30, 64, 175, 0.35), transparent 50%),
+                  linear-gradient(to bottom, rgba(15, 23, 42, 0.5), transparent 40%);
+      mix-blend-mode: multiply;
+    }
+
+    .storm-rain {
+      position: absolute;
+      inset: -30%;
+      background-image: repeating-linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.75) 0px,
+        rgba(255, 255, 255, 0.75) 1px,
+        transparent 1px,
+        transparent 6px
+      );
+      opacity: 0.4;
+      transform: translate3d(0, 0, 0);
+      animation: rain 1300ms linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes rain {
+      from { transform: translate3d(0, -10%, 0); }
+      to { transform: translate3d(-6%, 6%, 0); }
+    }
+
+    .hero-label {
+      position: absolute;
+      bottom: 1.1rem;
+      left: 1.1rem;
+      padding: 0.35rem 0.8rem;
+      border-radius: var(--radius-pill);
+      background: rgba(10, 32, 19, 0.9);
+      color: var(--white);
+      font-size: 0.7rem;
       display: inline-flex;
-      gap: 8px;
       align-items: center;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+      gap: 0.4rem;
     }
 
-    .hero-pill-icon {
-      width: 20px;
-      height: 20px;
+    .hero-label-badge {
+      padding: 0.15rem 0.45rem;
       border-radius: 999px;
-      background: var(--accent);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 0.85rem;
-      color: #4e342e;
+      background: rgba(63, 209, 108, 0.16);
+      font-size: 0.65rem;
+      color: #9ef2b4;
     }
 
-    /* Sections */
+    .hero-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.8rem;
+    }
+
+    .hero-card-footer strong {
+      color: var(--green-dark);
+    }
+
+    .hero-pill-metric {
+      padding: 0.3rem 0.7rem;
+      border-radius: var(--radius-pill);
+      background: rgba(28, 140, 66, 0.1);
+      font-size: 0.75rem;
+      color: var(--green-dark);
+    }
+
+    .hero-floating-badge {
+      position: absolute;
+      right: -0.3rem;
+      top: 1rem;
+      background: var(--gray-900);
+      color: var(--white);
+      padding: 0.7rem 1rem;
+      border-radius: 18px;
+      font-size: 0.75rem;
+      box-shadow: 0 16px 34px rgba(0,0,0,0.4);
+      max-width: 200px;
+    }
+
+    .hero-floating-badge strong {
+      color: var(--accent-yellow);
+    }
+
+    /* SECTIONS BASE */
     section {
-      padding: 32px 0;
+      padding: 2.4rem 0;
     }
 
     .section-header {
-      text-align: center;
-      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: flex-end;
+      margin-bottom: 1.6rem;
     }
 
-    .section-eyebrow {
+    .section-kicker {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.75rem;
-      color: var(--primary-dark);
+      color: var(--green-dark);
       font-weight: 600;
-      margin-bottom: 4px;
+      margin-bottom: 0.3rem;
     }
 
     .section-title {
-      font-size: 1.4rem;
-      color: #263238;
-      margin-bottom: 6px;
+      font-size: 1.35rem;
+      color: var(--gray-900);
+      font-weight: 600;
     }
 
     .section-subtitle {
-      font-size: 0.9rem;
-      color: var(--muted);
-      max-width: 520px;
-      margin: 0 auto;
+      font-size: 0.85rem;
+      color: var(--gray-600);
+      max-width: 24rem;
     }
 
-    /* Cards */
-    .grid {
+    /* BENEFÍCIOS */
+    .benefits-grid {
       display: grid;
-      gap: 16px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.3rem;
     }
 
-    .grid-3 {
-      grid-template-columns: repeat(1, minmax(0, 1fr));
+    .benefit-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 1.1rem 1.1rem 1rem;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.05);
+      border: 1px solid rgba(15, 92, 41, 0.06);
     }
 
-    @media (min-width: 720px) {
-      .grid-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 16px;
-      padding: 16px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-      height: 100%;
-    }
-
-    .card-icon {
+    .benefit-icon {
       width: 32px;
       height: 32px;
-      border-radius: 10px;
-      background: #e0f2f1;
+      border-radius: 999px;
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-bottom: 0.7rem;
+      background: rgba(28, 140, 66, 0.08);
       font-size: 1.1rem;
-      margin-bottom: 10px;
-      color: var(--primary-dark);
     }
 
-    .card-title {
-      font-weight: 700;
+    .benefit-title {
       font-size: 0.95rem;
-      margin-bottom: 4px;
-      color: #263238;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
     }
 
-    .card-text {
-      font-size: 0.85rem;
-      color: var(--muted);
+    .benefit-text {
+      font-size: 0.8rem;
+      color: var(--gray-600);
     }
 
-    /* Antes/Depois */
-    .before-after {
+    /* APLICAÇÕES */
+    .apps-grid {
       display: grid;
-      gap: 16px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.1rem;
     }
 
-    @media (min-width: 900px) {
-      .hero-grid {
-        flex-direction: row;
-        align-items: center;
-      }
-
-      .hero-left, .hero-right {
-        flex: 1;
-      }
-
-      .before-after {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .nav-links {
-        display: flex;
-      }
-
-      .nav-cta {
-        display: inline-flex;
-      }
-    }
-
-    .ba-card {
-      background: #fff;
+    .app-card {
       border-radius: 18px;
       overflow: hidden;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      background: var(--white);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.04);
+      border: 1px solid rgba(15, 92, 41, 0.05);
+      display: flex;
+      flex-direction: column;
     }
 
-    .ba-body {
-      padding: 12px 14px 14px;
+    .app-image {
+      height: 120px;
+      background: linear-gradient(135deg, #d1e4f1, #eaf2fb);
+      position: relative;
+      overflow: hidden;
     }
 
-    .ba-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #78909c;
-      margin-bottom: 4px;
+    .app-image::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 10% 0%, rgba(255,255,255,0.9) 0, transparent 50%),
+        linear-gradient(135deg, rgba(28, 140, 66, 0.3), transparent 60%);
+      mix-blend-mode: screen;
     }
 
-    .ba-title {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: #263238;
-      margin-bottom: 4px;
+    .app-content {
+      padding: 0.8rem 1rem 1rem;
+      flex: 1;
     }
 
-    .ba-text {
-      font-size: 0.82rem;
-      color: var(--muted);
+    .app-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
     }
 
-    /* Steps */
-    .steps {
+    .app-text {
+      font-size: 0.78rem;
+      color: var(--gray-600);
+    }
+
+    /* PRODUTOS */
+    .products-grid {
       display: grid;
-      gap: 16px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.1rem;
     }
 
-    @media (min-width: 720px) {
-      .steps {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
+    .product-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 1.1rem 1.2rem 1rem;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.05);
+      border: 1px solid rgba(15, 92, 41, 0.06);
     }
 
-    .step-badge {
-      width: 28px;
-      height: 28px;
+    .product-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.4rem;
+    }
+
+    .product-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .product-badge {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.55rem;
       border-radius: 999px;
-      background: #e0f2f1;
+      background: rgba(28, 140, 66, 0.06);
+      color: var(--green-dark);
+    }
+
+    .product-specs {
+      font-size: 0.78rem;
+      color: var(--gray-700);
+      margin-bottom: 0.5rem;
+    }
+
+    .product-specs span {
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+
+    .product-notes {
+      font-size: 0.75rem;
+      color: var(--gray-600);
+      margin-bottom: 0.7rem;
+    }
+
+    .product-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+    }
+
+    .product-footer strong {
+      color: var(--green-dark);
+    }
+
+    /* COMPARE (ANTES/DEPOIS) */
+    .compare-section {
+      background: var(--gray-100);
+      border-radius: 26px;
+      padding: 1.6rem 1.6rem 1.5rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(15, 92, 41, 0.08);
+      margin-top: 0.75rem;
+    }
+
+    .compare-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 0.75rem;
+    }
+
+    .compare-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 1rem 1rem 0.9rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      border: 1px solid rgba(15, 92, 41, 0.06);
+    }
+
+    .compare-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gray-500);
+    }
+
+    .compare-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--gray-900);
+    }
+
+    .compare-text {
+      font-size: 0.78rem;
+      color: var(--gray-600);
+    }
+
+    .compare-image {
+      border-radius: 14px;
+      background: linear-gradient(135deg, #f5c1c1, #f5e0e0);
+      padding: 0.65rem;
+      font-size: 0.75rem;
+      color: #5f2121;
+      margin-bottom: 0.25rem;
+    }
+
+    .compare-image.alt {
+      background: linear-gradient(135deg, #c9efdd, #e7faf2);
+      color: #104b2b;
+    }
+
+    /* SOBRE NÓS */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 1.5rem;
+    }
+
+    .about-card {
+      background: var(--white);
+      border-radius: 22px;
+      padding: 1.2rem 1.3rem 1.15rem;
+      box-shadow: 0 16px 38px rgba(15, 23, 42, 0.05);
+      border: 1px solid rgba(15, 92, 41, 0.07);
+    }
+
+    .about-text {
+      font-size: 0.82rem;
+      color: var(--gray-700);
+      margin-bottom: 0.55rem;
+    }
+
+    .about-list {
+      font-size: 0.8rem;
+      color: var(--gray-700);
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .about-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.4rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .about-list li::before {
+      content: "•";
+      color: var(--green-dark);
+      margin-top: 0.05rem;
+    }
+
+    .about-badge {
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      margin-bottom: 0.4rem;
+    }
+
+    .about-highlight {
+      font-size: 0.8rem;
+      color: var(--green-dark);
+      font-weight: 600;
+    }
+
+    .about-card-secondary {
+      background: var(--green-soft);
+      border-radius: 22px;
+      padding: 1.1rem 1.2rem 1rem;
+      border: 1px solid rgba(15, 92, 41, 0.2);
+    }
+
+    .about-secondary-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .about-secondary-text {
+      font-size: 0.78rem;
+      color: var(--gray-700);
+      margin-bottom: 0.5rem;
+    }
+
+    .about-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      font-size: 0.72rem;
+    }
+
+    .about-tag {
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(15, 92, 41, 0.1);
+      color: var(--green-dark);
+    }
+
+    /* CONTATO */
+    .contact {
+      padding-bottom: 2.8rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      gap: 1.6rem;
+    }
+
+    .contact-card {
+      background: var(--white);
+      border-radius: 22px;
+      padding: 1.1rem 1.2rem 1.2rem;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.05);
+      border: 1px solid rgba(15, 92, 41, 0.07);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      font-size: 0.78rem;
+    }
+
+    .field label {
+      color: var(--gray-700);
+      font-weight: 500;
+    }
+
+    .field input,
+    .field textarea {
+      border-radius: 12px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      padding: 0.55rem 0.7rem;
+      font-family: inherit;
+      font-size: 0.8rem;
+      outline: none;
+      transition: border 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+      background: #f9fafb;
+    }
+
+    .field input:focus,
+    .field textarea:focus {
+      border-color: var(--green-main);
+      box-shadow: 0 0 0 1px rgba(28, 140, 66, 0.4);
+      background: #ffffff;
+    }
+
+    .field textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    .field-small {
+      font-size: 0.7rem;
+      color: var(--gray-500);
+    }
+
+    .contact-info-card {
+      background: var(--green-soft);
+      border-radius: 22px;
+      padding: 1.1rem 1.2rem 1.1rem;
+      border: 1px solid rgba(15, 92, 41, 0.18);
+    }
+
+    .contact-info-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.45rem;
+    }
+
+    .contact-info-list {
+      list-style: none;
+      font-size: 0.8rem;
+      color: var(--gray-800);
+      margin-bottom: 0.6rem;
+    }
+
+    .contact-info-list li {
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-map {
+      margin-top: 0.65rem;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #d1e3ff;
+      height: 150px;
+      position: relative;
+    }
+
+    .contact-map::before {
+      content: "Mapa ilustrativo — substitua por embed do Google Maps";
+      position: absolute;
+      inset: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 700;
       font-size: 0.8rem;
-      color: var(--primary-dark);
-      margin-bottom: 8px;
+      color: #1f2937;
+      background: linear-gradient(135deg, #d1e4ff, #e0f2fe);
     }
 
-    /* Depoimentos */
-    .testimonial {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .testimonial-text {
-      font-size: 0.88rem;
-      color: #37474f;
-    }
-
-    .testimonial-name {
-      font-weight: 700;
-      font-size: 0.85rem;
-      color: #263238;
-    }
-
-    .testimonial-meta {
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-
-    /* FAQ */
-    .faq-list {
-      max-width: 720px;
-      margin: 0 auto;
-      display: grid;
-      gap: 10px;
-    }
-
-    .faq-item {
-      background: #fff;
-      border-radius: 12px;
-      padding: 10px 12px;
-      border-left: 3px solid #eceff1;
-    }
-
-    .faq-q {
-      font-weight: 700;
-      font-size: 0.9rem;
-      margin-bottom: 4px;
-      color: #263238;
-    }
-
-    .faq-a {
-      font-size: 0.82rem;
-      color: var(--muted);
-    }
-
-    /* Região */
-    .cities {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: center;
-      margin-top: 16px;
-    }
-
-    .city-pill {
-      font-size: 0.78rem;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: #eceff1;
-      color: #455a64;
-    }
-
-    /* CTA final */
-    .final-cta {
-      text-align: center;
-      background: linear-gradient(135deg, var(--primary-dark), #004d40);
-      color: #e0f2f1;
-      border-radius: 18px;
-      padding: 24px 18px;
-      box-shadow: 0 10px 26px rgba(0,0,0,0.3);
-    }
-
-    .final-cta-title {
-      font-size: 1.3rem;
-      font-weight: 800;
-      margin-bottom: 6px;
-    }
-
-    .final-cta-text {
-      font-size: 0.9rem;
-      margin-bottom: 16px;
-      color: #b2dfdb;
-    }
-
-    .final-cta small {
-      display: block;
-      font-size: 0.75rem;
-      margin-top: 8px;
-      color: #b2dfdb;
-    }
-
-    /* Footer */
+    /* FOOTER */
     footer {
-      padding: 18px 0 26px;
-      font-size: 0.78rem;
-      color: #90a4ae;
+      border-top: 1px solid rgba(148, 163, 184, 0.3);
+      background: #0b1720;
+      color: rgba(248, 250, 252, 0.88);
+      padding: 1.5rem 0 1.35rem;
+      margin-top: auto;
     }
 
     .footer-grid {
       display: grid;
-      gap: 10px;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+      gap: 1.3rem;
+      align-items: center;
+      font-size: 0.78rem;
     }
 
-    @media (min-width: 720px) {
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .footer-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #22c55e, #15803d);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: white;
+    }
+
+    .footer-brand-text span:first-child {
+      font-weight: 600;
+    }
+
+    .footer-brand-text span:last-child {
+      color: #9ca3af;
+      font-size: 0.75rem;
+    }
+
+    .footer-right {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1.2rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 0.8rem;
+      font-size: 0.75rem;
+      color: #9ca3af;
+    }
+
+    .footer-links a:hover {
+      color: #e5e7eb;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    .footer-social span {
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+    }
+
+    .footer-bottom {
+      margin-top: 0.9rem;
+      font-size: 0.7rem;
+      color: #6b7280;
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    /* BOTÃO FIXO WHATSAPP */
+    .whatsapp-float {
+      position: fixed;
+      right: 1.3rem;
+      bottom: 1.3rem;
+      z-index: 60;
+    }
+
+    .whatsapp-btn {
+      background: #25d366;
+      color: #ffffff;
+      border-radius: 999px;
+      padding: 0.6rem 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      box-shadow: 0 18px 40px rgba(22, 163, 74, 0.55);
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    .whatsapp-btn-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 960px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-media {
+        order: -1;
+      }
+
+      .benefits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .apps-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .products-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .about-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
       .footer-grid {
-        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .footer-right {
+        justify-content: flex-start;
       }
     }
 
-    .footer-title {
-      font-weight: 700;
-      margin-bottom: 4px;
-      color: #455a64;
-      font-size: 0.8rem;
-    }
+    @media (max-width: 768px) {
+      header {
+        position: sticky;
+      }
 
-    .footer-link {
-      display: block;
-      margin-bottom: 2px;
-    }
+      .header-inner {
+        flex-wrap: wrap;
+      }
 
-    /* Mobile nav toggle (simples) */
-    .nav-toggle {
-      display: inline-flex;
-      width: 32px;
-      height: 32px;
-      border-radius: 999px;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid #cfd8dc;
-      background: #ffffff;
-      cursor: pointer;
-    }
+      nav {
+        width: 100%;
+        justify-content: space-between;
+        gap: 0.5rem;
+      }
 
-    .nav-toggle span {
-      width: 16px;
-      height: 2px;
-      background: #455a64;
-      position: relative;
-    }
+      .nav-links {
+        display: none; /* pra simplificar no mobile; podemos depois fazer menu hamburger */
+      }
 
-    .nav-toggle span::before,
-    .nav-toggle span::after {
-      content: "";
-      position: absolute;
-      width: 16px;
-      height: 2px;
-      background: #455a64;
-      left: 0;
-    }
+      .nav-actions {
+        margin-left: auto;
+      }
 
-    .nav-toggle span::before {
-      top: -5px;
-    }
+      .hero {
+        padding-top: 1.6rem;
+      }
 
-    .nav-toggle span::after {
-      top: 5px;
-    }
+      section {
+        padding: 2rem 0;
+      }
 
-    .nav-mobile {
-      display: none;
-      flex-direction: column;
-      gap: 10px;
-      padding: 10px 0 12px;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
+      .compare-section {
+        padding: 1.1rem;
+      }
 
-    .nav-mobile a {
-      padding: 4px 0;
-    }
+      .compare-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
 
-    @media (min-width: 900px) {
-      .nav-toggle, .nav-mobile {
-        display: none !important;
+      .benefits-grid,
+      .apps-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .whatsapp-btn span:last-child {
+        display: none; /* só ícone no mobile */
       }
     }
   </style>
-
-  <script>
-    // menu mobile simples
-    function toggleNav() {
-      const nav = document.getElementById("nav-mobile");
-      if (!nav) return;
-      const isVisible = nav.style.display === "flex";
-      nav.style.display = isVisible ? "none" : "flex";
-    }
-  </script>
 </head>
 <body>
+  <div class="page">
+    <!-- WHATSAPP FLOAT -->
+    <div class="whatsapp-float">
+      <a
+        class="whatsapp-btn"
+        href="https://wa.me/5544998362919?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20das%20Telhas%20Ecol%C3%B3gicas."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="whatsapp-btn-icon">💬</span>
+        <span>Falar no WhatsApp</span>
+      </a>
+    </div>
 
-  <!-- HEADER -->
-  <header>
-    <div class="container">
-      <div class="nav">
-        <a href="#topo" class="logo">
-          <div class="logo-mark">M</div>
-          <span>Mega Telhas Ecológicas</span>
-        </a>
-
-        <nav class="nav-links">
-          <a href="#beneficios">Benefícios</a>
-          <a href="#antes-depois">Antes &amp; Depois</a>
-          <a href="#como-funciona">Como funciona</a>
-          <a href="#depoimentos">Depoimentos</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contato">Contato</a>
-        </nav>
-
-        <div class="nav-cta">
-          <!-- TROCAR LINK DO WHATSAPP AQUI -->
-          <a href="https://wa.me/5500000000000" class="btn btn-primary" target="_blank" rel="noopener">
-            Falar no WhatsApp
-          </a>
+    <!-- HEADER -->
+    <header>
+      <div class="shell header-inner">
+        <div class="brand">
+          <div class="brand-logo">MT</div>
+          <div class="brand-text">
+            <span>Mega Telhas Eco</span>
+            <span>Telhas ecológicas resistentes e sustentáveis</span>
+          </div>
         </div>
 
-        <button class="nav-toggle" onclick="toggleNav()">
-          <span></span>
-        </button>
-      </div>
-
-      <nav id="nav-mobile" class="nav-mobile">
-        <a href="#beneficios" onclick="toggleNav()">Benefícios</a>
-        <a href="#antes-depois" onclick="toggleNav()">Antes &amp; Depois</a>
-        <a href="#como-funciona" onclick="toggleNav()">Como funciona</a>
-        <a href="#depoimentos" onclick="toggleNav()">Depoimentos</a>
-        <a href="#faq" onclick="toggleNav()">FAQ</a>
-        <a href="#contato" onclick="toggleNav()">Contato</a>
-        <!-- TROCAR LINK DO WHATSAPP AQUI -->
-        <a href="https://wa.me/5500000000000" class="btn btn-primary" target="_blank" rel="noopener">
-          Falar no WhatsApp
-        </a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="topo">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-left">
-          <div class="badge">
-            <span class="badge-dot"></span>
-            Telhas ecológicas testadas em tempestades reais
+        <nav>
+          <div class="nav-links">
+            <a href="#inicio" class="active">Início</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#vantagens">Vantagens</a>
+            <a href="#aplicacoes">Onde usar</a>
+            <a href="#sobre">Sobre nós</a>
+            <a href="#contato">Contato</a>
           </div>
 
-          <h1 class="hero-title">
-            Proteção total contra <span class="hero-highlight">granizo e ventos extremos</span> para a sua casa.
-          </h1>
+          <div class="nav-actions">
+            <div class="header-phone">
+              <span>WhatsApp</span>
+              <strong>(44) 99836-2919</strong>
+            </div>
+            <a
+              href="https://wa.me/5544998362919?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20das%20Telhas%20Ecol%C3%B3gicas."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-ghost btn-pill"
+            >
+              Orçamento rápido
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
 
+    <!-- HERO -->
+    <main id="inicio" class="hero">
+      <div class="shell hero-inner">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span class="hero-tag-dot"></span>
+            Telhas ecológicas pensadas para tempestades reais
+          </div>
+          <h1 class="hero-title">
+            Proteção real contra <span>granizo</span> e <span>ventos extremos</span>
+            para a sua casa.
+          </h1>
           <p class="hero-subtitle">
-            As Mega Telhas Ecológicas foram projetadas para resistir às novas ondas de temporais no Paraná:
-            granizo de grande diâmetro, ventos fortes e chuvas intensas – com segurança, conforto acústico e
-            respeito ao meio ambiente.
+            As Mega Telhas Ecológicas foram desenvolvidas para resistir a chuvas de granizo,
+            ventanias e mudanças climáticas intensas, oferecendo conforto térmico, acústico
+            e segurança para o seu telhado.
           </p>
 
-          <div class="hero-cta">
-            <!-- TROCAR LINK DO WHATSAPP AQUI -->
-            <a href="https://wa.me/5500000000000" class="btn btn-primary" target="_blank" rel="noopener">
+          <div class="hero-actions">
+            <a
+              href="https://wa.me/5544998362919?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20das%20Telhas%20Ecol%C3%B3gicas."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary btn-pill"
+            >
+              <span class="btn-icon">➤</span>
               Quero proteger meu telhado
             </a>
-            <a href="#como-funciona" class="btn btn-outline">
-              Ver como funciona
+            <a href="#vantagens" class="btn btn-ghost btn-pill">
+              Ver vantagens das Mega Telhas
             </a>
           </div>
 
-          <p class="hero-note">
-            Atendemos residências, comércios e indústrias em todo o Paraná.
-          </p>
-
-          <div class="hero-badges">
-            <div class="hero-badge-chip">Resistente ao granizo</div>
-            <div class="hero-badge-chip">Instalação rápida</div>
-            <div class="hero-badge-chip">Material ecológico reciclado</div>
-            <div class="hero-badge-chip">Menos ruído de chuva</div>
+          <div class="hero-highlights">
+            <div class="hero-highlight-item">
+              <span class="hero-highlight-dot"></span>
+              Mais de 10 anos de experiência
+            </div>
+            <div class="hero-highlight-item">
+              <span class="hero-highlight-dot"></span>
+              Referência em telhas ecológicas no Brasil
+            </div>
+            <div class="hero-highlight-item">
+              <span class="hero-highlight-dot"></span>
+              Atendimento especializado pelo WhatsApp
+            </div>
           </div>
         </div>
 
-        <div class="hero-right hero-image">
-          <div class="hero-card">
-            <!-- TROCAR ESTA IMAGEM PELO SEU ANTES/DEPOIS OU FOTO AÉREA -->
-            <img src="https://via.placeholder.com/640x400?text=Imagem+do+Telhado+Mega+Telhas" alt="Casa protegida com Mega Telhas ecológicas" />
-            <div class="hero-card-caption">
-              Imagem ilustrativa de telhado com Mega Telhas. Substitua aqui pela sua foto real de projeto concluído.
-            </div>
-          </div>
+        <div class="hero-media">
+          <div class="hero-card-main">
+            <div class="hero-image-roof">
+              <div class="roof-layer"></div>
+              <div class="storm-overlay"></div>
+              <div class="storm-rain"></div>
 
-          <div class="hero-pill">
-            <div class="hero-pill-icon">⛈️</div>
-            <div>
-              <strong>Projetado para tempestades reais</strong><br />
-              <span style="font-size: 0.7rem;">Casas que permaneceram intactas após granizo e ventos fortes.</span>
+              <div class="hero-label">
+                <span class="hero-label-badge">Teste de tempestade</span>
+                Telhado permanece íntegro após granizo e ventos fortes.
+              </div>
+            </div>
+
+            <div class="hero-card-footer">
+              <div>
+                <div style="font-size: 0.78rem; color: var(--gray-600); margin-bottom: 0.15rem;">
+                  Casas protegidas com Mega Telhas
+                </div>
+                <strong>Alta resistência + conforto térmico</strong>
+              </div>
+              <div class="hero-pill-metric">
+                Ideal para residências, aviários e projetos sustentáveis
+              </div>
+            </div>
+
+            <div class="hero-floating-badge">
+              Granizo, chuva forte e ventania?<br />
+              <strong>Seu telhado não pode ser o ponto fraco da sua casa.</strong>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </main>
 
-    <!-- BENEFÍCIOS -->
-    <section id="beneficios">
-      <div class="container">
+    <!-- VANTAGENS -->
+    <section id="vantagens">
+      <div class="shell">
         <div class="section-header">
-          <div class="section-eyebrow">Por que Mega Telhas?</div>
-          <h2 class="section-title">Mais segurança, durabilidade e conforto para sua família.</h2>
+          <div>
+            <div class="section-kicker">Por que escolher Mega Telhas Ecológicas?</div>
+            <h2 class="section-title">Segurança, conforto e sustentabilidade no mesmo telhado.</h2>
+          </div>
           <p class="section-subtitle">
-            Enquanto telhas tradicionais se quebram com o granizo e deslocam com ventanias, as Mega Telhas
-            Ecológicas foram desenvolvidas para resistir, proteger e ainda reduzir o impacto ambiental.
+            Diferente das telhas comuns, as telhas ecológicas da Mega Telhas foram projetadas para unir
+            alta resistência mecânica, conforto térmico e responsabilidade ambiental.
           </p>
         </div>
 
-        <div class="grid grid-3">
-          <div class="card">
-            <div class="card-icon">🧱</div>
-            <h3 class="card-title">Resistência ao granizo</h3>
-            <p class="card-text">
-              Material de alta resistência, que suporta impactos de granizo sem quebrar como telhas de cerâmica
-              ou fibrocimento convencionais.
+        <div class="benefits-grid">
+          <article class="benefit-card">
+            <div class="benefit-icon">🛡️</div>
+            <h3 class="benefit-title">Alta resistência e durabilidade</h3>
+            <p class="benefit-text">
+              Produzidas para suportar chuvas de granizo e ventos fortes, reduzindo quebras e
+              a necessidade de manutenção constante.
             </p>
-          </div>
+          </article>
 
-          <div class="card">
-            <div class="card-icon">🌪️</div>
-            <h3 class="card-title">Mais segurança em ventanias</h3>
-            <p class="card-text">
-              Fixação reforçada e menor risco de desplacamento em ventos fortes, reduzindo danos ao telhado e
-              à estrutura da casa.
+          <article class="benefit-card">
+            <div class="benefit-icon">🌡️</div>
+            <h3 class="benefit-title">Conforto térmico e acústico</h3>
+            <p class="benefit-text">
+              Telhas que ajudam a manter a temperatura interna mais agradável e reduzem ruídos
+              de chuva e impactos externos.
             </p>
-          </div>
+          </article>
 
-          <div class="card">
-            <div class="card-icon">🔇</div>
-            <h3 class="card-title">Menos ruído de chuva</h3>
-            <p class="card-text">
-              O sistema reduz significativamente o barulho da chuva em comparação a telhas metálicas, trazendo
-              mais conforto acústico.
+          <article class="benefit-card">
+            <div class="benefit-icon">♻️</div>
+            <h3 class="benefit-title">Sustentáveis de verdade</h3>
+            <p class="benefit-text">
+              Feitas com materiais reciclados, como embalagens longa vida, transformando resíduos
+              em proteção de alto desempenho.
             </p>
-          </div>
+          </article>
 
-          <div class="card">
-            <div class="card-icon">♻️</div>
-            <h3 class="card-title">Ecológica e sustentável</h3>
-            <p class="card-text">
-              Produzida com material reciclado de alta qualidade, ajudando a reduzir resíduos e impacto ambiental.
+          <article class="benefit-card">
+            <div class="benefit-icon">🪚</div>
+            <h3 class="benefit-title">Leves e fáceis de instalar</h3>
+            <p class="benefit-text">
+              Permitem cortes manuais, facilitam o transporte e reduzem o esforço sobre a estrutura
+              da construção.
             </p>
-          </div>
+          </article>
 
-          <div class="card">
-            <div class="card-icon">⚡</div>
-            <h3 class="card-title">Instalação rápida</h3>
-            <p class="card-text">
-              Sistema prático, com peças leves e encaixe otimizado, que agiliza a obra e reduz custos com mão de obra.
+          <article class="benefit-card">
+            <div class="benefit-icon">🔥</div>
+            <h3 class="benefit-title">Não propagam chamas</h3>
+            <p class="benefit-text">
+              Projetadas para maior segurança em caso de incêndios, não propagam chamas nem soltam faíscas.
             </p>
-          </div>
+          </article>
 
-          <div class="card">
-            <div class="card-icon">✅</div>
-            <h3 class="card-title">Durabilidade e garantia</h3>
-            <p class="card-text">
-              Solução projetada para durar anos com baixa manutenção, com garantia e assistência técnica especializada.
+          <article class="benefit-card">
+            <div class="benefit-icon">🏡</div>
+            <h3 class="benefit-title">Versáteis em aplicações</h3>
+            <p class="benefit-text">
+              Ideais para casas, granjas, aviários, galpões, áreas de lazer, forros e projetos especiais
+              com placas ecológicas.
             </p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ANTES / DEPOIS -->
-    <section id="antes-depois">
-      <div class="container">
+    <!-- APLICAÇÕES -->
+    <section id="aplicacoes">
+      <div class="shell">
         <div class="section-header">
-          <div class="section-eyebrow">Antes e depois</div>
-          <h2 class="section-title">Veja a diferença de um telhado protegido.</h2>
+          <div>
+            <div class="section-kicker">Onde as Mega Telhas fazem a diferença</div>
+            <h2 class="section-title">Aplicações reais em obras por todo o Brasil.</h2>
+          </div>
           <p class="section-subtitle">
-            Utilize esta área para mostrar fotos reais de obras executadas: antes da tempestade, depois da tempestade,
-            e o estado do telhado com Mega Telhas.
+            Das residências aos aviários, as telhas ecológicas se adaptam a diferentes tipos de projeto,
+            sempre com foco em durabilidade e conforto.
           </p>
         </div>
 
-        <div class="before-after">
-          <div class="ba-card">
-            <!-- TROCAR IMAGEM PELO SEU "ANTES" -->
-            <img src="https://via.placeholder.com/640x360?text=Antes+-+Telhado+danificado" alt="Telhado danificado após tempestade" />
-            <div class="ba-body">
-              <div class="ba-label">Antes</div>
-              <div class="ba-title">Telhado destruído após granizo e ventania</div>
-              <p class="ba-text">
-                Casas com telhas comuns ficam expostas a infiltrações, goteiras e riscos estruturais depois de
-                temporais severos.
+        <div class="apps-grid">
+          <article class="app-card">
+            <div class="app-image"></div>
+            <div class="app-content">
+              <h3 class="app-title">Residências e áreas de lazer</h3>
+              <p class="app-text">
+                Coberturas residenciais, garagens, varandas e áreas externas com telhas leves,
+                duráveis e com excelente acabamento.
               </p>
             </div>
-          </div>
+          </article>
 
-          <div class="ba-card">
-            <!-- TROCAR IMAGEM PELO SEU "DEPOIS" -->
-            <img src="https://via.placeholder.com/640x360?text=Depois+-+Mega+Telhas" alt="Casa protegida com Mega Telhas ecológicas" />
-            <div class="ba-body">
-              <div class="ba-label">Depois</div>
-              <div class="ba-title">Casa intacta com Mega Telhas Ecológicas</div>
-              <p class="ba-text">
-                Após a instalação das Mega Telhas, o telhado permanece íntegro, sem quebras ou desplacamentos,
-                garantindo segurança à família.
+          <article class="app-card">
+            <div class="app-image"></div>
+            <div class="app-content">
+              <h3 class="app-title">Granjas, aviários e agro</h3>
+              <p class="app-text">
+                Ideal para criadouros e estruturas rurais que exigem conforto térmico para animais
+                e alta proteção contra sol e chuva.
               </p>
             </div>
-          </div>
+          </article>
+
+          <article class="app-card">
+            <div class="app-image"></div>
+            <div class="app-content">
+              <h3 class="app-title">Placas ecológicas e revestimentos</h3>
+              <p class="app-text">
+                Uso em divisórias, forros, vans revestidas, ambientes industriais e soluções criativas
+                com placas ecológicas.
+              </p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- COMO FUNCIONA -->
-    <section id="como-funciona">
-      <div class="container">
+    <!-- PRODUTOS -->
+    <section id="produtos">
+      <div class="shell">
         <div class="section-header">
-          <div class="section-eyebrow">Como funciona</div>
-          <h2 class="section-title">Do diagnóstico à instalação, passo a passo.</h2>
+          <div>
+            <div class="section-kicker">Produtos</div>
+            <h2 class="section-title">Dimensões pensadas para otimizar a sua obra.</h2>
+          </div>
           <p class="section-subtitle">
-            Em poucos passos você protege o seu telhado com uma solução completa, desde o orçamento até o pós-obra.
+            Conheça as medidas das telhas ecológicas Mega Telhas e veja qual combina melhor com
+            o seu projeto. Em caso de dúvidas, nossa equipe orienta pelo WhatsApp.
           </p>
         </div>
 
-        <div class="steps">
-          <div class="card">
-            <div class="step-badge">1</div>
-            <h3 class="card-title">Análise do telhado</h3>
-            <p class="card-text">
-              Você envia fotos ou agenda uma visita técnica. Analisamos o estado atual do telhado, inclinação,
-              estrutura e necessidades específicas.
+        <div class="products-grid">
+          <article class="product-card">
+            <div class="product-header">
+              <h3 class="product-title">Telha Ecológica 2,45m x 0,96m</h3>
+              <span class="product-badge">Alta cobertura</span>
+            </div>
+            <div class="product-specs">
+              <span>Comprimento: 2,45m</span>
+              <span>Largura: 0,96m</span>
+              <span>Espessura: 5,7mm</span>
+            </div>
+            <p class="product-notes">
+              Indicada para coberturas em geral, garante boa sobreposição, excelente escoamento
+              de água e acabamento visual uniforme.
             </p>
-          </div>
+            <div class="product-footer">
+              <span>Ideal para residências, galpões e granjas.</span>
+              <strong>Consulte valores</strong>
+            </div>
+          </article>
 
-          <div class="card">
-            <div class="step-badge">2</div>
-            <h3 class="card-title">Projeto &amp; orçamento</h3>
-            <p class="card-text">
-              Montamos a melhor configuração de Mega Telhas para o seu caso e apresentamos um orçamento detalhado
-              com condições de pagamento.
+          <article class="product-card">
+            <div class="product-header">
+              <h3 class="product-title">Telha Ecológica 2,20m x 0,96m</h3>
+              <span class="product-badge">Versatilidade</span>
+            </div>
+            <div class="product-specs">
+              <span>Comprimento: 2,20m</span>
+              <span>Largura: 0,96m</span>
+              <span>Espessura: 5,7mm</span>
+            </div>
+            <p class="product-notes">
+              Excelente opção para projetos que exigem medidas específicas ou adequação a estruturas
+              já existentes, mantendo o mesmo padrão de qualidade.
             </p>
-          </div>
-
-          <div class="card">
-            <div class="step-badge">3</div>
-            <h3 class="card-title">Instalação e acompanhamento</h3>
-            <p class="card-text">
-              Equipe especializada realiza a instalação. Ao final, você recebe orientações de manutenção e canal
-              direto para suporte.
-            </p>
-          </div>
+            <div class="product-footer">
+              <span>Perfeita para ampliações e ajustes de cobertura.</span>
+              <strong>Fale com um especialista</strong>
+            </div>
+          </article>
         </div>
-      </div>
-    </section>
 
-    <!-- DEPOIMENTOS -->
-    <section id="depoimentos">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-eyebrow">Depoimentos</div>
-          <h2 class="section-title">Famílias que já estão protegidas.</h2>
-          <p class="section-subtitle">
-            Adapte os textos abaixo com relatos reais de clientes da Mega Telhas, citando cidades e tipos de obra.
-          </p>
-        </div>
-
-        <div class="grid grid-3">
-          <div class="card testimonial">
-            <p class="testimonial-text">
-              “Depois das últimas chuvas de granizo em nossa região, o telhado dos vizinhos quebrou todo. O nosso
-              ficou intacto com as Mega Telhas. Foi o melhor investimento que fizemos na casa.”
-            </p>
+        <div class="compare-section">
+          <div class="section-header" style="margin-bottom: 0.8rem;">
             <div>
-              <div class="testimonial-name">Maria e João</div>
-              <div class="testimonial-meta">Residência – Região de Curitiba (PR)</div>
+              <div class="section-kicker">Antes e depois</div>
+              <h2 class="section-title">Quando a chuva chega, a diferença aparece.</h2>
             </div>
-          </div>
-
-          <div class="card testimonial">
-            <p class="testimonial-text">
-              “Antes a gente não conseguia nem assistir TV quando chovia forte, de tanto barulho no telhado.
-              Agora a chuva continua forte, mas dentro de casa o barulho diminuiu muito.”
+            <p class="section-subtitle">
+              Compare o comportamento de telhados tradicionais com telhados protegidos por
+              Mega Telhas Ecológicas durante tempestades severas.
             </p>
-            <div>
-              <div class="testimonial-name">Família Santos</div>
-              <div class="testimonial-meta">Casa térrea – Interior do Paraná</div>
-            </div>
           </div>
 
-          <div class="card testimonial">
-            <p class="testimonial-text">
-              “Reformamos o telhado do nosso mini-mercado com Mega Telhas Ecológicas. Além de mais segurança,
-              o ambiente ficou mais agradável para os clientes.”
+          <div class="compare-grid">
+            <article class="compare-card">
+              <div class="compare-image">
+                Imagem ilustrativa de telhado danificado após granizo e ventania<br />
+                <small>(substituir por foto real “antes”)</small>
+              </div>
+              <div class="compare-label">Antes</div>
+              <h3 class="compare-title">Telhado destruído após granizo e ventos fortes</h3>
+              <p class="compare-text">
+                Telhas comuns podem quebrar, permitir infiltrações, goteiras e comprometer a estrutura
+                após tempestades severas, deixando a família exposta a riscos e prejuízos.
+              </p>
+            </article>
+
+            <article class="compare-card">
+              <div class="compare-image alt">
+                Imagem ilustrativa de telhado com Mega Telhas intacto após tempestade<br />
+                <small>(substituir por foto real “depois”)</small>
+              </div>
+              <div class="compare-label">Depois</div>
+              <h3 class="compare-title">Casa protegida com Mega Telhas Ecológicas</h3>
+              <p class="compare-text">
+                Com Mega Telhas Ecológicas instaladas corretamente, o telhado permanece firme, sem quebras
+                ou deslocamentos, ajudando a manter a casa seca, segura e protegida durante o pior da tempestade.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE NÓS -->
+    <section id="sobre">
+      <div class="shell">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Quem somos</div>
+            <h2 class="section-title">Mais do que telhas, uma solução ecológica completa.</h2>
+          </div>
+          <p class="section-subtitle">
+            Desde 2011, a Mega Telhas Ecológicas transforma materiais recicláveis em produtos
+            duráveis, seguros e modernos, com foco total em proteção e sustentabilidade.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <article class="about-card">
+            <div class="about-badge">Fundada em 17/10/2011 — Nova Esperança, PR</div>
+            <p class="about-text">
+              A Mega Telhas Ecológicas nasceu de uma pergunta simples:
+              <strong>“Como proteger melhor o lar das pessoas e, ao mesmo tempo, cuidar do meio ambiente?”</strong>
             </p>
-            <div>
-              <div class="testimonial-name">Carlos</div>
-              <div class="testimonial-meta">Comércio local – PR</div>
+            <p class="about-text">
+              A resposta veio com pesquisa, tecnologia e um compromisso real com a sustentabilidade. Hoje,
+              a Mega Telhas é referência nacional em telhas e placas ecológicas, atendendo obras em todo o Brasil
+              com um padrão rigoroso de qualidade.
+            </p>
+            <p class="about-highlight">Cada telha carrega um propósito:</p>
+            <ul class="about-list">
+              <li>Proteger o seu lar com excelência;</li>
+              <li>Reduzir o impacto ambiental com soluções inteligentes;</li>
+              <li>Unir sustentabilidade, conforto e durabilidade como nunca antes.</li>
+            </ul>
+          </article>
+
+          <article class="about-card-secondary">
+            <h3 class="about-secondary-title">Nossa essência</h3>
+            <p class="about-secondary-text">
+              Ao escolher a Mega Telhas, você apoia uma empresa que acredita que construção civil e responsabilidade
+              ambiental podem caminhar juntas — com inovação, respeito e cuidado em cada detalhe.
+            </p>
+            <div class="about-tags">
+              <span class="about-tag">Soluções sustentáveis</span>
+              <span class="about-tag">Qualidade certificada</span>
+              <span class="about-tag">Foco em segurança</span>
+              <span class="about-tag">Atendimento humano</span>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq">
-      <div class="container">
+    <!-- CONTATO -->
+    <section id="contato" class="contact">
+      <div class="shell">
         <div class="section-header">
-          <div class="section-eyebrow">FAQ</div>
-          <h2 class="section-title">Dúvidas frequentes.</h2>
+          <div>
+            <div class="section-kicker">Contato</div>
+            <h2 class="section-title">Fale com a Mega Telhas Ecológicas.</h2>
+          </div>
           <p class="section-subtitle">
-            Responda aqui as principais objeções do seu cliente: durabilidade, garantia, instalação, financiamento, etc.
+            Tire suas dúvidas, solicite orçamento e veja como as telhas ecológicas podem ser aplicadas
+            na sua obra. Retornamos o mais rápido possível.
           </p>
         </div>
 
-        <div class="faq-list">
-          <div class="faq-item">
-            <div class="faq-q">As Mega Telhas realmente aguentam granizo forte?</div>
-            <div class="faq-a">
-              Sim. O material utilizado é projetado para absorver impactos com muito mais resistência do que telhas
-              tradicionais, reduzindo drasticamente riscos de trincas e quebras.
-            </div>
-          </div>
+        <div class="contact-grid">
+          <article class="contact-card">
+            <form class="contact-form">
+              <div class="field">
+                <label for="nome">Nome *</label>
+                <input id="nome" type="text" placeholder="Seu nome completo" />
+              </div>
+              <div class="field">
+                <label for="telefone">Telefone / WhatsApp *</label>
+                <input id="telefone" type="text" placeholder="(   )      -" />
+              </div>
+              <div class="field">
+                <label for="email">E-mail</label>
+                <input id="email" type="email" placeholder="seuemail@exemplo.com" />
+              </div>
+              <div class="field">
+                <label for="mensagem">Mensagem *</label>
+                <textarea id="mensagem" placeholder="Conte rapidamente qual é a sua obra ou necessidade."></textarea>
+                <span class="field-small">
+                  Este formulário é ilustrativo. Substitua por integração real de envio de e-mails ou formulário externo.
+                </span>
+              </div>
 
-          <div class="faq-item">
-            <div class="faq-q">Posso instalar Mega Telhas em qualquer tipo de casa?</div>
-            <div class="faq-a">
-              Na maioria dos casos, sim. Nossa equipe avalia a estrutura do telhado e indica a melhor solução,
-              seja para casas térreas, sobrados, comércios ou pequenas indústrias.
-            </div>
-          </div>
+              <button type="button" class="btn btn-primary btn-pill">
+                Enviar mensagem
+              </button>
+            </form>
+          </article>
 
-          <div class="faq-item">
-            <div class="faq-q">Vocês atendem todo o Paraná?</div>
-            <div class="faq-a">
-              Atendemos grande parte do Estado. Informe sua cidade pelo WhatsApp e verificamos a disponibilidade
-              da equipe técnica para sua região.
-            </div>
-          </div>
+          <article class="contact-info-card">
+            <h3 class="contact-info-title">Atendimento e localização</h3>
+            <ul class="contact-info-list">
+              <li><strong>Cidade:</strong> Nova Esperança – PR</li>
+              <li><strong>Endereço:</strong> Avenida Felipe Camarão, 480 C</li>
+              <li><strong>Telefone e WhatsApp:</strong> (44) 99836-2919</li>
+              <li><strong>E-mail:</strong> contato@megatlhas.eco.br</li>
+            </ul>
+            <p class="contact-info-title" style="margin-bottom: 0.3rem;">Horário de atendimento</p>
+            <p class="contact-info-list" style="margin-bottom: 0.4rem;">
+              Segunda a sexta-feira, horário comercial. Para mensagens fora do horário,
+              retornamos assim que possível.
+            </p>
 
-          <div class="faq-item">
-            <div class="faq-q">É possível parcelar o pagamento?</div>
-            <div class="faq-a">
-              Sim. Trabalhamos com condições facilitadas, que podem variar conforme o valor da obra e o tipo de cliente.
-              Entre em contato para consultar as opções ativas no momento.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-q">As telhas precisam de muita manutenção?</div>
-            <div class="faq-a">
-              Não. Com a instalação correta, a manutenção é simples e esporádica, focada em limpeza e conferência
-              periódica do sistema de fixação.
-            </div>
-          </div>
+            <div class="contact-map"></div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- REGIÃO / CONTATO -->
-    <section id="contato">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-eyebrow">Atuação</div>
-          <h2 class="section-title">Atendemos o Paraná e regiões próximas.</h2>
-          <p class="section-subtitle">
-            Fale conosco pelo WhatsApp para confirmar a disponibilidade na sua cidade e receber um orçamento personalizado.
-          </p>
+    <!-- FOOTER -->
+    <footer>
+      <div class="shell">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">MT</div>
+            <div class="footer-brand-text">
+              <span>Mega Telhas Ecológicas</span><br />
+              <span>Proteção, conforto e sustentabilidade para o seu telhado.</span>
+            </div>
+          </div>
+
+          <div class="footer-right">
+            <div class="footer-links">
+              <a href="#inicio">Início</a>
+              <a href="#produtos">Produtos</a>
+              <a href="#vantagens">Vantagens</a>
+              <a href="#contato">Contato</a>
+            </div>
+            <div class="footer-social">
+              <span>f</span>
+              <span>▶</span>
+              <span>◎</span>
+            </div>
+          </div>
         </div>
 
-        <div class="cities">
-          <span class="city-pill">Curitiba</span>
-          <span class="city-pill">Londrina</span>
-          <span class="city-pill">Maringá</span>
-          <span class="city-pill">Cascavel</span>
-          <span class="city-pill">Ponta Grossa</span>
-          <span class="city-pill">Região metropolitana</span>
-          <span class="city-pill">Interior do PR</span>
-        </div>
-
-        <br />
-
-        <div class="final-cta">
-          <h3 class="final-cta-title">Quer proteger o seu telhado da próxima tempestade?</h3>
-          <p class="final-cta-text">
-            Envie agora mesmo fotos do seu telhado pelo WhatsApp e receba um diagnóstico inicial gratuito da Mega Telhas
-            Ecológicas.
-          </p>
-
-          <!-- TROCAR LINK DO WHATSAPP AQUI -->
-          <a href="https://wa.me/5500000000000" class="btn btn-primary" style="background:#ffca28;color:#37474f;border:none;" target="_blank" rel="noopener">
-            Falar com um especialista pelo WhatsApp
-          </a>
-
-          <small>* Atendimento em horário comercial. Caso envie sua mensagem fora do horário, responderemos o mais breve possível.</small>
+        <div class="footer-bottom">
+          <span>© Mega Telhas Ecológicas — Todos os direitos reservados.</span>
+          <span>Site demonstrativo desenvolvido em parceria com WonderVerse.</span>
         </div>
       </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container footer-grid">
-      <div>
-        <div class="footer-title">Mega Telhas Ecológicas</div>
-        <p>
-          Soluções em telhados ecológicos resistentes ao granizo e ventos fortes. Segurança, durabilidade e conforto
-          para sua família.
-        </p>
-      </div>
-      <div>
-        <div class="footer-title">Contato</div>
-        <span class="footer-link">WhatsApp: (00) 00000-0000</span>
-        <span class="footer-link">E-mail: contato@megatelhas.eco.br</span>
-        <span class="footer-link">Paraná – Brasil</span>
-      </div>
-      <div>
-        <div class="footer-title">Redes sociais</div>
-        <span class="footer-link">Instagram</span>
-        <span class="footer-link">Facebook</span>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </body>
 </html>
+
